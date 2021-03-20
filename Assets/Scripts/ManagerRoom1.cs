@@ -13,11 +13,9 @@ public class ManagerRoom1 : MonoBehaviour
     void Awake()
     {
         rigNumber = doors.Count;
-        
         GenerateKey(rigNumber);
         Debug.Log(key);
         state = new bool[] {false, false, false, false, false, false};
-
     }
 
     private void GenerateKey(int size)
@@ -51,8 +49,9 @@ public class ManagerRoom1 : MonoBehaviour
     private int CompareKeyState()
     {
         int difference = 0;
-        for (int i = 0; i < state.Length; i++)
+        for (int i = 0; i < key.Length; i++)
         {
+            Debug.Log(i);
             if (state[i] != key[i]) difference++;
         }
         return difference;
