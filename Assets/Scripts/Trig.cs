@@ -6,7 +6,8 @@ public class Trig : MonoBehaviour
 {
 
     public int id = 0;
-    private bool State;
+    private bool state;
+    private ManagerRoom1 managerRoom1;
     private SpriteRenderer sRender;
     void Awake()
     {
@@ -15,7 +16,24 @@ public class Trig : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        state = GetState(id);
+        managerRoom1 = GameObject.Find("ManagerRoom1").GetComponent<ManagerRoom1>();
+        state = managerRoom1.GetState(id);
+        UpdateColor();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        // Toogle the state when player hits the Trig
+        if (other.gameObject.tag == "Player")
+        {
+            managerRoom1.toggleState(id);
+            state = !state;
+            UpdateColor();
+        }   
+    }
+
+    private void UpdateColor()
+    {
         if (state == true)
         {
             sRender.color = new Color(0,255,0);
@@ -24,14 +42,5 @@ public class Trig : MonoBehaviour
         {
             sRender.color = new Color(0,0,255);
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other) 
-    {
-        // Toogle the state when player hits the Trig
-        if (other.gameObject.tag == "Player")
-        {
-            toogleState(id);
-        }   
     }
 }
