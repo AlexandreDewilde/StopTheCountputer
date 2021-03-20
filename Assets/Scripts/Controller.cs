@@ -33,6 +33,7 @@ public class Controller : MonoBehaviour
         rb.MovePosition(rb.position + move * Speed * Time.deltaTime);
 
         Vector2 lookDir = mousePosition - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;
     }
 }
