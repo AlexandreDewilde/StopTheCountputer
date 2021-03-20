@@ -23,6 +23,7 @@ public class Trig : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        Debug.Log("Trigger");
         // Toogle the state when player hits the Trig
         if (other.gameObject.tag == "Player")
         {
@@ -40,7 +41,7 @@ public class Trig : MonoBehaviour
         }
         else
         {
-            sRender.color = new Color(0,0,255);
+            sRender.color = new Color(255,0,0);
         }
     }
 }
