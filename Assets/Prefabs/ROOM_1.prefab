@@ -37,6 +37,7 @@ Transform:
   - {fileID: 4802643349890028565}
   - {fileID: 4802643348307149100}
   - {fileID: 4802643350216724242}
+  - {fileID: 8043100571863589858}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50,6 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4802643348307149100}
   - component: {fileID: 4802643348307149103}
+  - component: {fileID: 4900941109972585974}
   m_Layer: 0
   m_Name: Trig4
   m_TagString: Untagged
@@ -122,6 +124,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4900941109972585974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802643348307149102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93705a37f54101369bdb82277e1d5ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3
 --- !u!1 &4802643348546324589
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4802643348546324627}
   - component: {fileID: 4802643348546324626}
+  - component: {fileID: 1921715403855297181}
   m_Layer: 0
   m_Name: Trig2
   m_TagString: Untagged
@@ -204,6 +220,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1921715403855297181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802643348546324589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93705a37f54101369bdb82277e1d5ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
 --- !u!1 &4802643348719017792
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4802643348719017798}
   - component: {fileID: 4802643348719017793}
+  - component: {fileID: 68408168783306269}
   m_Layer: 0
   m_Name: Trig1
   m_TagString: Untagged
@@ -286,6 +316,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &68408168783306269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802643348719017792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93705a37f54101369bdb82277e1d5ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
 --- !u!1 &4802643349890028567
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4802643349890028565}
   - component: {fileID: 4802643349890028564}
+  - component: {fileID: 9123628078672116254}
   m_Layer: 0
   m_Name: Trig3
   m_TagString: Untagged
@@ -368,6 +412,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9123628078672116254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802643349890028567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93705a37f54101369bdb82277e1d5ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
 --- !u!1 &4802643350216724204
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4802643350216724242}
   - component: {fileID: 4802643350216724205}
+  - component: {fileID: 3896559960137373557}
   m_Layer: 0
   m_Name: Trig5
   m_TagString: Untagged
@@ -450,6 +508,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3896559960137373557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802643350216724204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93705a37f54101369bdb82277e1d5ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4
 --- !u!1 &5010753982846115696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,3 +1387,33 @@ Transform:
   m_Father: {fileID: 4044629223539872823}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!1 &6069428809223139284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8043100571863589858}
+  m_Layer: 0
+  m_Name: MANAGER_ROOM1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8043100571863589858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6069428809223139284}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4059974, y: -0.237938, z: -0.32167265}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4044629223539872823}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -16,7 +16,7 @@ public class Trig : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        managerRoom1 = GameObject.Find("ManagerRoom1").GetComponent<ManagerRoom1>();
+        managerRoom1 = GameObject.Find("MANAGER_ROOM1").GetComponent<ManagerRoom1>();
         state = managerRoom1.GetState(id);
         UpdateColor();
     }
