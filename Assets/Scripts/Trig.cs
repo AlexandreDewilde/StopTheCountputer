@@ -6,6 +6,7 @@ public class Trig : MonoBehaviour
 {
 
     public int id = 0;
+
     private bool state;
     private ManagerRoom1 managerRoom1;
     private SpriteRenderer sRender;
