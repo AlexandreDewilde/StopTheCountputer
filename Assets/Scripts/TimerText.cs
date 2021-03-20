@@ -12,10 +12,10 @@ public class TimerText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Timer = time.time() - Tzero;
+        float Timer = Time.time - Tzero;
         int minutes = Mathf.FloorToInt(Timer / 60F);
 	    int seconds = Mathf.FloorToInt(Timer % 60F);
 	    int milliseconds = Mathf.FloorToInt((Timer * 100F) % 100F);
-        TextTimer.GetCompenent<Text>().text = minutes.ToString ("00") + ":" + seconds.ToString ("00") + ":" + milliseconds.ToString("00");
+        TextTimer.GetComponent<Text>().text = minutes.ToString ("00") + ":" + seconds.ToString ("00") + ":" + milliseconds.ToString("00");
     }
 }
