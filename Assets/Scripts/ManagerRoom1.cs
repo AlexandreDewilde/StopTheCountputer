@@ -7,16 +7,19 @@ public class ManagerRoom1 : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<GameObject> doors;
-    private int rigNumber;
+    public int trigNumber;
     private bool[] state;
     private bool[] key;
+
     void Awake()
     {
-        rigNumber = doors.Count;
+        GenerateKey(trigNumber);
 
-        GenerateKey(rigNumber);
-        Debug.Log(key);
-        state = new bool[] {false, false, false, false, false, false};
+        state = new bool[trigNumber];
+        for (int i = 0; i < trigNumber; i++)
+        {
+            state[i] = false;
+        }
     }
 
     private void GenerateKey(int size)
@@ -24,7 +27,8 @@ public class ManagerRoom1 : MonoBehaviour
         key = new bool[size];
         for (int i = 0; i < size; i++)
         {
-            key[i] = Random.Range(0,1) != 0;
+            key[i] = Random.Range(0,2) != 0;
+            Debug.Log(key[i]);
         }
     }
 
@@ -35,7 +39,6 @@ public class ManagerRoom1 : MonoBehaviour
 
     public void toggleState(int id)
     {
-
         state[id] = !state[id];
         int difference = CompareKeyState();
         if (difference == 0)
@@ -50,7 +53,7 @@ public class ManagerRoom1 : MonoBehaviour
     private int CompareKeyState()
     {
         int difference = 0;
-        for (int i = 0; i < key.Length; i++)
+        for (int i = 0; i < trigNumber; i++)
         {
             if (state[i] != key[i]) difference++;
         }

@@ -1842,6 +1842,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1afb4230ec6aa0e37ad22b6004fb60d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doors:
+  - {fileID: 6809596641684974859}
+  - {fileID: 864168910744088402}
+  - {fileID: 3616637303676940424}
+  trigNumber: 5
 --- !u!1 &6809596641684974859
 GameObject:
   m_ObjectHideFlags: 0
