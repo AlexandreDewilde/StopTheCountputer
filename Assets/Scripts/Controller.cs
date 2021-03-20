@@ -11,9 +11,12 @@ public class Controller : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 move;
     // Start is called before the first frame update
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     void Start()
     {
-       rb = GetComponent<Rigidbody2D>();
        camera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
     // Update is called once per frame
