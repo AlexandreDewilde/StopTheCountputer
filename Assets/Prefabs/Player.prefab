@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 20405606}
   - component: {fileID: 20405605}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6360696105256035347}
   - component: {fileID: 2047737706}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: hammer_rP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 2520660810552652608}
   - component: {fileID: 4098083766832972828}
   - component: {fileID: 1888166127}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
