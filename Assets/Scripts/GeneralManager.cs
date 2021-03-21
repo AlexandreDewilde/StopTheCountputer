@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GeneralManager : MonoBehaviour
 {
-    public int maxX = 5;
-    public int maxY = 5;
+    public int maxX = 6;
+    public int maxY = 6;
 
     public GameObject CPURoom;
     
@@ -17,7 +17,7 @@ public class GeneralManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        coordsCPURoom = new Vector3(25f * Random.Range(2,4), 25f * Random.Range(2,4), 0);
+        coordsCPURoom = new Vector3(25f * Random.Range(2,6), 25f * Random.Range(0,6), 0);
         roomsCoords.Add(coordsCPURoom);
         roomsCoords.Add(new Vector3(0,0,0));
     }
