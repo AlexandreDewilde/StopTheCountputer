@@ -12,7 +12,7 @@ public class Bit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isGood = Random.Range(0,2) != 0;
+        isGood = Random.Range(0,3) != 0;
         initTime = Time.time;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (isGood) spriteRenderer.color = new Color(0,255,0);

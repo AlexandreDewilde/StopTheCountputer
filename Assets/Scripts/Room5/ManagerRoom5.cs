@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class manages the room5
+// It instance random gameObject bits every second
+// It creates a puzzle where the player have to hit X bits "green" in a row
+// Whoithout touching red bit
+// And destroy the doors obstacle when the players unlock the puzzle
+/// </summary>
 public class ManagerRoom5 : MonoBehaviour
 {
     // The number of the right Collision to destroy the doors
@@ -23,13 +30,14 @@ public class ManagerRoom5 : MonoBehaviour
     {
         lastUpdateTime = Time.time;
     }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         if (Time.time - lastUpdateTime > 1)
         {
-            Vector3 spawnPosition = ownRoom.transform.position + new Vector3(Random.Range(-10,10), Random.Range(-10,10), 0);
-            Vector3 spawnPosition2 = ownRoom.transform.position + new Vector3(Random.Range(-10,10), Random.Range(-10,10), 0);
+            Vector3 spawnPosition = ownRoom.transform.position + new Vector3(Random.Range(-10,10), Random.Range(-10,10), -0.5);
+            Vector3 spawnPosition2 = ownRoom.transform.position + new Vector3(Random.Range(-10,10), Random.Range(-10,10), -0.5);
             Rigidbody2D generatedBit = Instantiate(bit0, spawnPosition, Quaternion.identity).GetComponent<Rigidbody2D>();
             Rigidbody2D generatedBit2 = Instantiate(bit1, spawnPosition2, Quaternion.identity).GetComponent<Rigidbody2D>();
             generatedBit.GetComponent<Bit>().gameManager = this;
