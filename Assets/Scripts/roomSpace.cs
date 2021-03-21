@@ -26,7 +26,7 @@ public class roomSpace : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("Touched");
-            generalManager.GenerateRoom(transform.position, generatorVector);
+            generalManager.GenerateRoom(ownRoom.transform.position, generatorVector);
             Destroy(gameObject);
         }
     }
