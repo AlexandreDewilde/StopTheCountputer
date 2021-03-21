@@ -32,7 +32,7 @@ public class ManagerRoom2 : MonoBehaviour
         int previousID = currentID;
         while (previousID == currentID)
         {
-            currentID = Random.Range(0,trigs.Count-1);
+            currentID = Random.Range(0,trigs.Count);
             screen_Colors[currentID].GetComponent<SpriteRenderer>().enabled = true;
         }
     }

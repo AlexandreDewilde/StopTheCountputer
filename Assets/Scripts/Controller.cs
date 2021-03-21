@@ -28,6 +28,9 @@ public class Controller : MonoBehaviour
         mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
     }
 
+
+
+
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + move * Speed * Time.deltaTime);
@@ -35,5 +38,10 @@ public class Controller : MonoBehaviour
         Vector2 lookDir = mousePosition - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
+    }
+
+    public Vector2 GetMousePos()
+    {
+        return mousePosition;
     }
 }
