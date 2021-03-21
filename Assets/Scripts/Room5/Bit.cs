@@ -36,3 +36,5 @@ public class Bit : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+}
