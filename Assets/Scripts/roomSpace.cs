@@ -7,6 +7,8 @@ public class roomSpace : MonoBehaviour
     // Start is called before the first frame update
     public Vector3 generatorVector;
     private GeneralManager generalManager;
+    
+
     void Start()
     {
         generalManager = GameObject.Find("GENERAL_MANAGER").GetComponent<GeneralManager>();
@@ -20,7 +22,11 @@ public class roomSpace : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        generalManager.GenerateRoom(transform.position, generatorVector);
-        Destroy(gameObject);
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Touched");
+            generalManager.GenerateRoom(transform.position, generatorVector);
+            Destroy(gameObject);
+        }
     }
 }
