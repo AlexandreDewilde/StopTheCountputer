@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static LoginMenu;
 
 
 /*
@@ -22,10 +23,32 @@ public class HighScoreTable : MonoBehaviour
     private List<Transform> transformList;
 
 
-    private class HighscoresList
+    public class HighscoresList
     {
        public List<Entry> entryList; 
     }
+
+
+    [System.Serializable]
+    public class Entry
+    {
+        public int score;
+        public string name;
+    }
+
+    public static void PushScore(string name, int score)
+   {
+        string strget = PlayerPrefs.GetString("highscore");
+        HighscoresList lstjson = JsonUtility.FromJson<HighscoresList>(strget);
+        
+        Entry ThisPlayer = new Entry() {name = Globals.PlayerName, score = 100};
+
+        lstjson.entryList.Add(ThisPlayer);
+
+        string strjson = JsonUtility.ToJson(lstjson);
+        PlayerPrefs.SetString("highscore", strjson);
+        PlayerPrefs.Save();
+   }
 
 
     private void Awake()
@@ -105,10 +128,4 @@ public class HighScoreTable : MonoBehaviour
     }
 
 
-    [System.Serializable]
-    private class Entry
-    {
-        public int score;
-        public string name;
-    }
 }
