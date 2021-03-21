@@ -283,4 +283,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hammer: {fileID: 793862200605812390}
-  distanceHammerHit: 2
+  distanceHammerHit: 4
