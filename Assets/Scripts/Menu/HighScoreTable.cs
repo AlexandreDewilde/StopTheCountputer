@@ -60,14 +60,6 @@ public class HighScoreTable : MonoBehaviour
 
         transformList = new List<Transform>();
 
-        List<Entry> entryList = new List<Entry>() {
-            new Entry{name = "Guillaume", score = 10000}};
-
-        HighscoresList entryListObj = new HighscoresList {entryList = entryList};
-        string jsonStr = JsonUtility.ToJson(entryListObj);
-        PlayerPrefs.SetString("highscore", jsonStr);
-        PlayerPrefs.Save();
-
         loadJson();
     }
 
@@ -122,7 +114,7 @@ public class HighScoreTable : MonoBehaviour
     
         for (int i = 0; i < entryList.Count; i++)
         {
-            if(i <= 10) break;
+            if(i >= 10) break;
             CreateEntry(entryList[i], entryContainer, transformList);
         }
     }
