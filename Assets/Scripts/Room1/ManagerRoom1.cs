@@ -9,17 +9,21 @@ public class ManagerRoom1 : MonoBehaviour
     // The list of doors gameObject in the Room1
     public List<GameObject> doors;
     // The numbers of Trig in the room
-    public int trigNumber; // The
+    public int trigNumber = 4; // The
     // The state of trigs
-    private bool[] state;
+    private List<bool> state;
     // The key the player should solve
-    private bool[] key;
+    private List<bool> key;
 
     void Awake()
     {
+        state = new List<bool>();
+        key = new List<bool>();
         GenerateKey();
 
         CreateState();
+        
+
     }
 
     /// <summary>
@@ -28,10 +32,9 @@ public class ManagerRoom1 : MonoBehaviour
     /// </summary>
     private void GenerateKey()
     {
-        key = new bool[trigNumber];
         for (int i = 0; i < trigNumber; i++)
         {
-            key[i] = Random.Range(0,2) != 0;
+            key.Add(Random.Range(0,2) != 0);
             Debug.Log(key[i]);
         }
     }
@@ -42,10 +45,9 @@ public class ManagerRoom1 : MonoBehaviour
     /// </summary>
     private void CreateState()
     {
-        state = new bool[trigNumber];
         for (int i = 0; i < trigNumber; i++)
         {
-            state[i] = false;
+            state.Add(false);
         }
     }
 

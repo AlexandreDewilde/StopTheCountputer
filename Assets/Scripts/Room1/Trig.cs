@@ -12,7 +12,7 @@ public class Trig : MonoBehaviour
     // The state of the trig
     private bool state;
     // The scripts that manage the room1
-    private ManagerRoom1 managerRoom1;
+    public ManagerRoom1 managerRoom1;
     // the sprite renderer of the gameObject, used to disable the render
     private SpriteRenderer sRender;
 
@@ -24,7 +24,6 @@ public class Trig : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        managerRoom1 = GameObject.Find("MANAGER_ROOM1").GetComponent<ManagerRoom1>();
         state = managerRoom1.GetState(id);
         UpdateColor();
     }
@@ -48,7 +47,7 @@ public class Trig : MonoBehaviour
     {
         if (state == true)
         {
-            sRender.color = new Color(255,0,0);
+            sRender.color = new Color(0,0,255);
         }
         else
         {
