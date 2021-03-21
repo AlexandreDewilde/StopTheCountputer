@@ -6,10 +6,10 @@ public class RigRoom2 : MonoBehaviour
 {
     // Start is called before the first frame update
     public int id = 0;
-    private ManagerRoom2 managerRoom2;
+    public ManagerRoom2 managerRoom2;
     void Start()
     {
-        managerRoom2 = GameObject.Find("MANAGER_ROOM2").GetComponent<ManagerRoom2>();
+        
     }
 
     // Update is called once per fram
