@@ -36,8 +36,8 @@ public class ManagerRoom5 : MonoBehaviour
     {
         if (Time.time - lastUpdateTime > 1)
         {
-            Vector3 spawnPosition = ownRoom.transform.position + new Vector3(Random.Range(-10,10), Random.Range(-10,10), -0.5);
-            Vector3 spawnPosition2 = ownRoom.transform.position + new Vector3(Random.Range(-10,10), Random.Range(-10,10), -0.5);
+            Vector3 spawnPosition = ownRoom.transform.position + new Vector3(Random.Range(-10,10), Random.Range(-10,10), -0.5f);
+            Vector3 spawnPosition2 = ownRoom.transform.position + new Vector3(Random.Range(-10,10), Random.Range(-10,10), -0.5f);
             Rigidbody2D generatedBit = Instantiate(bit0, spawnPosition, Quaternion.identity).GetComponent<Rigidbody2D>();
             Rigidbody2D generatedBit2 = Instantiate(bit1, spawnPosition2, Quaternion.identity).GetComponent<Rigidbody2D>();
             generatedBit.GetComponent<Bit>().gameManager = this;
