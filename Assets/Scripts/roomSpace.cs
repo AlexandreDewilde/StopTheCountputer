@@ -5,6 +5,7 @@ using UnityEngine;
 public class roomSpace : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject ownRoom;
     public Vector3 generatorVector;
     private GeneralManager generalManager;
     
