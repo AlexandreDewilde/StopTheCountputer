@@ -43,6 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4fd608aac914473ba2cd9ed7135f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxX: 5
+  maxY: 5
+  CPURoom: {fileID: 6070941256572479835, guid: c9a03ceddaed24a1f8154d8c47ea622c, type: 3}
+  bigDoor: {fileID: 2210194091437018288, guid: 28ed9241a0676477593c0265441f8fe1, type: 3}
   rooms:
   - {fileID: 869458187601379623, guid: 161eec92d79694f8a803536e0a2ae2a5, type: 3}
   - {fileID: 6612510161566275984, guid: 4ad1a4fb841eb449099129538ebeefe0, type: 3}
