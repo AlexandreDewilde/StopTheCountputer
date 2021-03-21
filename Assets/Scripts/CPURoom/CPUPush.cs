@@ -32,6 +32,7 @@ public class CPUPush : MonoBehaviour
         Debug.Log("CpuTriggered");
         EndScreenContainer = GameObject.Find("EndScreen");
         EndScreenContainer.GetComponent<Canvas>().enabled = true;
-        HighScoreTable.PushScore(Globals.PlayerName, TimerText.Timer);
+        Debug.Log(Time.time - TimerText.Tzero);
+        HighScoreTable.PushScore(Globals.PlayerName, Time.time - TimerText.Tzero);
     }
 }
