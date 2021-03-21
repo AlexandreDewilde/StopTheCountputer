@@ -1394,6 +1394,7 @@ GameObject:
   - component: {fileID: 3747265081007678593}
   - component: {fileID: 3682673217805753736}
   - component: {fileID: 3446907665736442938}
+  - component: {fileID: 7240527536209235392}
   m_Layer: 0
   m_Name: ROOM_SPACE_BOT
   m_TagString: Untagged
@@ -1462,6 +1463,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7240527536209235392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4964910518137578359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdedd31f34f839edba112419f5afb72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorVector: {x: 0, y: -1, z: 0}
 --- !u!1 &5838229997005026176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1639,7 @@ GameObject:
   - component: {fileID: 1674674754740287889}
   - component: {fileID: 1778412573505127105}
   - component: {fileID: 2427576977107183390}
+  - component: {fileID: 2767440360976209994}
   m_Layer: 0
   m_Name: ROOM_SPACE_RIGHT
   m_TagString: Untagged
@@ -1693,6 +1708,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2767440360976209994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8339720902539362404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdedd31f34f839edba112419f5afb72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorVector: {x: 1, y: 0, z: 0}
 --- !u!1 &8759236355723780207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,6 +1732,7 @@ GameObject:
   - component: {fileID: 7118820617430534431}
   - component: {fileID: 7555364912618180663}
   - component: {fileID: 3376452668942580750}
+  - component: {fileID: 1847387757537731754}
   m_Layer: 0
   m_Name: ROOM_SPACE_TOP
   m_TagString: Untagged
@@ -1772,3 +1801,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1847387757537731754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8759236355723780207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdedd31f34f839edba112419f5afb72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorVector: {x: 0, y: 1, z: 0}
