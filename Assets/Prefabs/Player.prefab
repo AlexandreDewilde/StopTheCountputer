@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 20405606}
   - component: {fileID: 20405605}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6360696105256035347}
   - component: {fileID: 2047737706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hammer_rP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 20405606}
-  m_Father: {fileID: 8216649017131378666}
+  m_Father: {fileID: 1816951731316169906}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2047737706
@@ -141,7 +141,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8216649017131378666}
+  - component: {fileID: 1816951731316169906}
   - component: {fileID: 8216649017131378665}
   - component: {fileID: 8216649017131378664}
   - component: {fileID: 8216649017131378671}
@@ -149,28 +149,33 @@ GameObject:
   - component: {fileID: 2520660810552652608}
   - component: {fileID: 4098083766832972828}
   - component: {fileID: 1888166127}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8216649017131378666
-Transform:
+--- !u!224 &1816951731316169906
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8216649017131378670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07677454, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6360696105256035347}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.07677454, y: 0}
+  m_SizeDelta: {x: 3.58, y: 4.15}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &8216649017131378665
 SpriteRenderer:
   m_ObjectHideFlags: 0
