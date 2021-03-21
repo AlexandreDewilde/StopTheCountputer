@@ -5,14 +5,16 @@ using UnityEngine;
 public class KeyTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public List<GameObject> doors;
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collider.gameObject.tag == "Player")
+        {
+            foreach (GameObject door in doors)
+            {
+                Destroy(door);
+            }
+            Destroy(gameObject);
+        }
     }
 }

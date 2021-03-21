@@ -17,6 +17,6 @@ public class FlyingKey : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(new Vector3(Random.Range(-250f, 250f), Random.Range(-250f,250f), 0f));
+        rb.AddForce(new Vector3(Random.Range(-250f, 250f), RaKeyndom.Range(-250f,250f), 0f));
     }
 }
