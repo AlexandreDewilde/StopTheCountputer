@@ -23,6 +23,7 @@ public class CPUPush : MonoBehaviour
 
     private void end()
     {
+        Debug.Log("CpuTriggered");
         EndScreenContainer = transform.Find("EndScreen");
         EndScreenContainer.gameObject.SetActive(true);
         HighScoreTable.PushScore(Globals.PlayerName, 100);
