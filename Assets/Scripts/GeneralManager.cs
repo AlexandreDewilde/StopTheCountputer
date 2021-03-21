@@ -41,7 +41,8 @@ public class GeneralManager : MonoBehaviour
         Vector3 roomPosition = distance + position;
         if (!CheckIfCoordsExist(roomPosition))
         {
-            Instantiate(newRoom, roomPosition, Quaternion.identity);
+            RoomMethods createdRoom = Instantiate(newRoom, roomPosition, Quaternion.identity).GetComponent<RoomMethods>();
+            createdRoom.DestroyDoor(DoorToDeleteFromDirection(direction));
             roomsCoords.Add(roomPosition);
             float x = roomPosition.x / 25f;
             float y = roomPosition.y / 25f;
@@ -63,6 +64,15 @@ public class GeneralManager : MonoBehaviour
                 Instantiate(bigDoor, roomPosition + new Vector3(0,12.5f,0), Quaternion.Euler(0, 0, 0));
             }
         }
+    }
+
+    string DoorToDeleteFromDirection(Vector3 direction)
+    {
+        if (direction.x == 1) return "left";
+        if (direction.x == -1) return "right";
+        if (direction.y == 1) return "up";
+        if (direction.y == -1) return "down";
+        return "left";
     }
 
     bool CheckIfCoordsExist(Vector3 coords)
