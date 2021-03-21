@@ -103,6 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4137780929678804393}
+  - component: {fileID: 2264618027969074355}
   m_Layer: 0
   m_Name: ROOM_5
   m_TagString: Untagged
@@ -136,6 +137,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2264618027969074355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963170610243899577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfa6bec2be78aed4abfbbe60360c63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorLeft: {fileID: 7744428083968527689}
+  doorRight: {fileID: 9256361198940893}
+  doorUp: {fileID: 7320648257069576876}
+  doorDown: {fileID: 1559375196850230925}
 --- !u!1 &1559375196850230925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: NONE
+  roomName: RAM
 --- !u!1 &5263469266529478525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,7 +2192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: NONE
+  roomName: RAM
 --- !u!1 &7320648257069576876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,7 +2381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: NONE
+  roomName: RAM
 --- !u!1 &7744428083968527689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2551,4 +2568,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: NONE
+  roomName: RAM
