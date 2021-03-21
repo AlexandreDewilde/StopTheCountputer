@@ -9,7 +9,7 @@ public class roomSpace : MonoBehaviour
     private GeneralManager generalManager;
     void Start()
     {
-        generalManager = GameObject.Find("GENERAL_MANAGER");
+        generalManager = GameObject.Find("GENERAL_MANAGER").GetComponent<GeneralManager>();
     }
 
     // Update is called once per frame
@@ -20,6 +20,7 @@ public class roomSpace : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        generalManager.GenerateRoom(transform.position * generatorVector);
+        generalManager.GenerateRoom(transform.position, generatorVector);
+        Destroy(gameObject);
     }
 }

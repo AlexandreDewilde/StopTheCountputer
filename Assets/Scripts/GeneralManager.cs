@@ -17,9 +17,12 @@ public class GeneralManager : MonoBehaviour
         
     }
 
-    public void GenerateRoom(Vector3 position)
+    public void GenerateRoom(Vector3 position, Vector3 direction)
     {
         GameObject newRoom = rooms[Random.Range(0, rooms.Count)];
-        Instantiate(newRoom, position, Quaternion.identity);
+        Vector3 distance = new Vector3(12.5f,12.5f,0f);
+        distance.x = distance.x * direction.x;
+        distance.y = distance.y * direction.y;
+        Instantiate(newRoom, position + distance, Quaternion.identity);
     }
 }
