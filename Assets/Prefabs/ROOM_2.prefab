@@ -2451,6 +2451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  managerRoom2: {fileID: 1069265939}
 --- !u!1 &4407137602127685630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,6 +2598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+  managerRoom2: {fileID: 1069265939}
 --- !u!1 &4407137603192178781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,6 +2827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  managerRoom2: {fileID: 1069265939}
 --- !u!1 &4407137603611741476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,6 +3056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  managerRoom2: {fileID: 1069265939}
 --- !u!1 &5100426109762470869
 GameObject:
   m_ObjectHideFlags: 0

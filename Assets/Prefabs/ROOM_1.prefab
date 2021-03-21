@@ -1088,6 +1088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  managerRoom1: {fileID: 944909511}
 --- !u!50 &50352518
 Rigidbody2D:
   serializedVersion: 4
@@ -1233,6 +1234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  managerRoom1: {fileID: 944909511}
 --- !u!50 &1987520620
 Rigidbody2D:
   serializedVersion: 4
@@ -1378,6 +1380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  managerRoom1: {fileID: 944909511}
 --- !u!50 &1134073343
 Rigidbody2D:
   serializedVersion: 4
