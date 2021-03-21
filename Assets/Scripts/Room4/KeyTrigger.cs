@@ -6,9 +6,10 @@ public class KeyTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<GameObject> doors;
-    void OnTriggerEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.tag == "Player")
+        Debug.Log("tru");
+        if (collider.gameObject.tag == "Player")
         {
             foreach (GameObject door in doors)
             {
