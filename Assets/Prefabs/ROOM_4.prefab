@@ -130,7 +130,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -158,7 +158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d65bfcf472ed19febf0b3a1e222a9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors: []
+  doors:
+  - {fileID: 3629258703407020978}
+  - {fileID: 1031225682660545653}
+  - {fileID: 391491875781918357}
+  - {fileID: 8280621745017158348}
 --- !u!1 &827980617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5566,7 +5570,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1369492846851369195
 GameObject:
@@ -5697,7 +5701,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1369492846908375197
 GameObject:
@@ -5828,7 +5832,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1369492847037687655
 GameObject:
@@ -5959,7 +5963,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1369492847151387592
 GameObject:
@@ -6090,7 +6094,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1369492847210498032
 GameObject:
@@ -6285,7 +6289,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1369492847605535936
 GameObject:
@@ -6416,7 +6420,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1369492847804297110
 GameObject:
@@ -6693,7 +6697,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &2334903639366645742
 GameObject:
@@ -7140,7 +7144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: Room 4
+  roomName: Cooling Room
 --- !u!1 &5421877302740584570
 GameObject:
   m_ObjectHideFlags: 0
@@ -7388,7 +7392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: Room 4
+  roomName: Cooling Room
 --- !u!1 &7518285190277566462
 GameObject:
   m_ObjectHideFlags: 0
@@ -7481,7 +7485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: Room 4
+  roomName: Cooling Room
 --- !u!1 &7587515925276336718
 GameObject:
   m_ObjectHideFlags: 0
@@ -7739,4 +7743,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: Room 4
+  roomName: Cooling Room
