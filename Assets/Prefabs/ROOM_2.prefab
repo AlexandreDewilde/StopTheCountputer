@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f9e8d294f22b1cfa33baf821bffdd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pendingTime: 10
+  pendingTime: 4
   trigs:
   - {fileID: 4407137603312597421}
   - {fileID: 4407137601825494966}
@@ -272,7 +272,7 @@ MonoBehaviour:
   - {fileID: 7691940677734068746}
   - {fileID: 3972213636045758681}
   - {fileID: 406601313903428488}
-  neededRight: 1
+  neededRight: 3
 --- !u!1 &821240749555445196
 GameObject:
   m_ObjectHideFlags: 0
