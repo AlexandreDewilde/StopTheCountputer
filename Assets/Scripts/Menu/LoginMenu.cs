@@ -16,7 +16,7 @@ public class LoginMenu : MonoBehaviour
 
     public void PlayGame()
     {
-
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
         Globals.PlayerName = InputField.text;
         Debug.Log(Globals.PlayerName);
     }

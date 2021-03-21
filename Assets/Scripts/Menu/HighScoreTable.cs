@@ -36,7 +36,7 @@ public class HighScoreTable : MonoBehaviour
         public string name;
     }
 
-    public static void PushScore(string name, int score)
+    public static void PushScore(string name, float score)
    {
         string strget = PlayerPrefs.GetString("highscore");
         HighscoresList lstjson = JsonUtility.FromJson<HighscoresList>(strget);
@@ -46,6 +46,7 @@ public class HighScoreTable : MonoBehaviour
         lstjson.entryList.Add(ThisPlayer);
 
         string strjson = JsonUtility.ToJson(lstjson);
+        Debug.Log(strjson);
         PlayerPrefs.SetString("highscore", strjson);
         PlayerPrefs.Save();
    }
@@ -60,17 +61,17 @@ public class HighScoreTable : MonoBehaviour
 
         transformList = new List<Transform>();
 
-        List<Entry> entryList = new List<Entry>() {
-            new Entry{name = "Alexandre", score = 5000}, 
-            new Entry{name = "Guillaume", score = 10000}, 
-            new Entry{name = "Hippolyte", score = 7500},
-            new Entry{name = "Guillaume", score = 10000}};
+        // List<Entry> entryList = new List<Entry>() {
+        //     new Entry{name = "Alexandre", score = 5000}, 
+        //     new Entry{name = "Guillaume", score = 10000}, 
+        //     new Entry{name = "Hippolyte", score = 7500},
+        //     new Entry{name = "Guillaume", score = 10000}};
 
-        HighscoresList entryListObj = new HighscoresList {entryList = entryList};
-        string jsonStr = JsonUtility.ToJson(entryListObj);
-        PlayerPrefs.SetString("highscore", jsonStr);
-        PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetString("highscore"));
+        // HighscoresList entryListObj = new HighscoresList {entryList = entryList};
+        // string jsonStr = JsonUtility.ToJson(entryListObj);
+        // PlayerPrefs.SetString("highscore", jsonStr);
+        // PlayerPrefs.Save();
+        // Debug.Log(PlayerPrefs.GetString("highscore"));
 
         loadJson();
     }
@@ -102,8 +103,13 @@ public class HighScoreTable : MonoBehaviour
         string player = entry.name;
         entryTransform.Find("Player").GetComponent<Text>().text = player;
 
-        int score = entry.score;
-        entryTransform.Find("Score").GetComponent<Text>().text = score.ToString();
+        // Trasforming seconds to mm:ss:ms
+        float score = entry.score;
+        int minutes = Mathf.FloorToInt(score / 60F);
+	    int seconds = Mathf.FloorToInt(score % 60F);
+	    int milliseconds = Mathf.FloorToInt((score * 100F) % 100F);
+        string txt = minutes.ToString ("00") + ":" + seconds.ToString("00") + ":" + milliseconds.ToString("00");
+        entryTransform.Find("Score").GetComponent<Text>().text = txt;
 
         list.Add(entryTransform);
     }
