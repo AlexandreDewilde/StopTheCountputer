@@ -10,10 +10,13 @@ public class Controller : MonoBehaviour
     private Vector2 mousePosition;
     private Rigidbody2D rb;
     private Vector2 move;
+
+    private Animator _animator;
     // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
     void Start()
     {
@@ -24,7 +27,7 @@ public class Controller : MonoBehaviour
     {
         move.x = Input.GetAxisRaw("Horizontal");
         move.y = Input.GetAxisRaw("Vertical");
-
+        if(move.x != 0 || move.y != 0) _animator.Play("walk");
         mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
     }
 

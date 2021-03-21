@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flying_key : MonoBehaviour
+public class FlyingKey : MonoBehaviour
 {
     Rigidbody2D rb;
     public float speed;
@@ -15,10 +15,8 @@ public class Flying_key : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        randAngle += Random.Range(-5f, 6f);
-        transform.Rotate(0.0f, 0.0f, randAngle, Space.Self);
-        rb.velocity = Vector3.up * speed;
+        rb.AddForce(new Vector3(Random.Range(-250f, 250f), Random.Range(-250f,250f), 0f));
     }
 }
