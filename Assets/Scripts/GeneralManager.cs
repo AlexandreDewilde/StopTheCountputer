@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class GeneralManager : MonoBehaviour
 {
+    public int maxX = 5;
+    public int maxY = 5;
+
+    public GameObject CPURoom;
     public List<GameObject> rooms;
+    private Vector3 coordsCPURoom;
+
     private List<Vector3> roomsCoords = new List<Vector3>();
     // Start is called before the first frame update
+    void Awake()
+    {
+        coordsCPURoom = new Vector3(12.5f * Random.Range(3,6), 12.5f * Random.Range(3, 6), 0);
+        roomsCoords.Add(new Vector3(0,0,0));
+    }
+
     void Start()
     {
-        Vector3 originalCoords = new Vector3(0,0,0);
-        roomsCoords.Add(originalCoords);
+        //Instantiate(CPURoom, coordsCPURoom, Quaternion.Identity);
     }
 
     // Update is called once per frame
@@ -35,8 +46,11 @@ public class GeneralManager : MonoBehaviour
 
     bool CheckIfCoordsExist(Vector3 coords)
     {
+        Debug.Log(coords.x);
         foreach (Vector3 roomCoord in roomsCoords)
         {
+            Debug.Log(roomCoord.x);
+            Debug.Log(roomCoord.y);
             if (roomCoord.x == coords.x && roomCoord.y == coords.y) return true;
 
         }
