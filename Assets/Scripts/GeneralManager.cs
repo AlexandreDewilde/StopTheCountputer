@@ -21,17 +21,6 @@ public class GeneralManager : MonoBehaviour
         roomsCoords.Add(new Vector3(0,0,0));
     }
 
-    void Start()
-    {
-        //Instantiate(CPURoom, coordsCPURoom, Quaternion.Identity);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void GenerateRoom(Vector3 position, Vector3 direction)
     {
         GameObject newRoom = rooms[Random.Range(0, rooms.Count)];
@@ -72,7 +61,7 @@ public class GeneralManager : MonoBehaviour
         if (direction.x == -1) return "right";
         if (direction.y == -1) return "up";
         if (direction.y == 1) return "down";
-        return "left";
+        return "none";
     }
 
     bool CheckIfCoordsExist(Vector3 coords)
