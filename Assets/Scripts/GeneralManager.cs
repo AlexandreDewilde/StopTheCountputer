@@ -17,7 +17,7 @@ public class GeneralManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        coordsCPURoom = new Vector3(12.5f * Random.Range(3,6), 12.5f * Random.Range(3, 6), 0);
+        coordsCPURoom = new Vector3(25f * Random.Range(2,4), 25f * Random.Range(2,4), 0);
         roomsCoords.Add(new Vector3(0,0,0));
     }
 
