@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMethods:MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Text roomNameText;
+
     public GameObject hammer;
 
     private Animator _animator;
@@ -24,8 +26,6 @@ public class PlayerMethods:MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
 
     void Update()
     {
@@ -66,6 +66,14 @@ public class PlayerMethods:MonoBehaviour
             isWeaponActive = false;
         }
     }
+
+    public void TellPlayerRoomName(string roomName)
+    {
+
+        roomNameText.text = roomName;
+
+    }
+
 
 
 }

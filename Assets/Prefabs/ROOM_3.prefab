@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 936388110960588208}
   - component: {fileID: 6872424456312585130}
   - component: {fileID: 6480777868226838105}
+  - component: {fileID: 5311463272692030447}
   m_Layer: 0
   m_Name: ENTER_ROOM_LEFT
   m_TagString: Untagged
@@ -222,6 +223,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5311463272692030447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015710291023205958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Room 3
 --- !u!1 &1382049216420722685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,6 +1373,7 @@ GameObject:
   - component: {fileID: 579123608993491981}
   - component: {fileID: 8921988913762751202}
   - component: {fileID: 3830696605770065384}
+  - component: {fileID: 4082581475855318208}
   m_Layer: 0
   m_Name: ENTER_ROOM_TOP
   m_TagString: Untagged
@@ -1427,6 +1442,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4082581475855318208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377652005315848500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Room 3
 --- !u!1 &3185662900936356513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1466,7 @@ GameObject:
   - component: {fileID: 5753068789849418466}
   - component: {fileID: 5950432175745628352}
   - component: {fileID: 644864771078256017}
+  - component: {fileID: 4482114295207884746}
   m_Layer: 0
   m_Name: ENTER_ROOM_BOT
   m_TagString: Untagged
@@ -1506,6 +1535,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4482114295207884746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185662900936356513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Room 3
 --- !u!1 &3436474073234288711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,7 +1641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownRoom: {fileID: 3549246591581979540}
-  generatorVector: {x: 1, y: 0, z: 0}
+  generatorVector: {x: -1, y: 0, z: 0}
 --- !u!1 &3549246591581979540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,6 +1902,7 @@ GameObject:
   - component: {fileID: 6849258042732732779}
   - component: {fileID: 3530349055045687381}
   - component: {fileID: 8900397182598426422}
+  - component: {fileID: 3544430896058689476}
   m_Layer: 0
   m_Name: ENTER_ROOM_RIGHT
   m_TagString: Untagged
@@ -1928,6 +1971,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3544430896058689476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5430184978954980516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016ce324ceebd4c618b433632a3488d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Room 3
 --- !u!1 &6450422012159156609
 GameObject:
   m_ObjectHideFlags: 0

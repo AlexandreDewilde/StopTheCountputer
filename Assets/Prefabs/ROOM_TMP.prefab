@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdedd31f34f839edba112419f5afb72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownRoom: {fileID: 0}
-  generatorVector: {x: 1, y: 0, z: 0}
+  ownRoom: {fileID: 8352022982729031720}
+  generatorVector: {x: -1, y: 0, z: 0}
 --- !u!1 &1606557524887286007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,7 +1730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdedd31f34f839edba112419f5afb72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownRoom: {fileID: 0}
+  ownRoom: {fileID: 8352022982729031720}
   generatorVector: {x: 0, y: 1, z: 0}
 --- !u!1 &7254561176976866921
 GameObject:
@@ -1858,7 +1858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdedd31f34f839edba112419f5afb72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownRoom: {fileID: 0}
+  ownRoom: {fileID: 8352022982729031720}
   generatorVector: {x: 0, y: -1, z: 0}
 --- !u!1 &8352022982729031720
 GameObject:
@@ -1993,5 +1993,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdedd31f34f839edba112419f5afb72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownRoom: {fileID: 0}
+  ownRoom: {fileID: 8352022982729031720}
   generatorVector: {x: 1, y: 0, z: 0}
