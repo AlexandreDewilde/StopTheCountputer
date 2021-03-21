@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class ManagerRoom5 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // The number of the right Collision to destroy the doors
     public int neededRightCollision = 5;
-
+    // The Game object of the room, this is useful to know the center of the room
+    // And spawn the items
     public GameObject ownRoom;
+    // List of doors in the room this is needed to destroy theem when the player unlock the puzzle 
     public List<GameObject> doors;
+    // Game Object that represent a bit 0
     public GameObject bit0;
+    // Game Object that represent bit 1
     public GameObject bit1;
     private float lastUpdateTime;
     
@@ -28,6 +32,8 @@ public class ManagerRoom5 : MonoBehaviour
             Vector3 spawnPosition2 = ownRoom.transform.position + new Vector3(Random.Range(-10,10), Random.Range(-10,10), 0);
             Rigidbody2D generatedBit = Instantiate(bit0, spawnPosition, Quaternion.identity).GetComponent<Rigidbody2D>();
             Rigidbody2D generatedBit2 = Instantiate(bit1, spawnPosition2, Quaternion.identity).GetComponent<Rigidbody2D>();
+            generatedBit.GetComponent<Bit>().gameManager = this;
+            generatedBit2.GetComponent<Bit>().gameManager = this;
             generatedBit.velocity = new Vector3(Random.Range(-10f,10f), Random.Range(-10f,10f),0f);
             generatedBit2.velocity = new Vector3(Random.Range(-10f,10f), Random.Range(-10f,10f),0f);
             lastUpdateTime = Time.time;
