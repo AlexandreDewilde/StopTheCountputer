@@ -20,7 +20,6 @@ public class ManagerRoom1 : MonoBehaviour
         state = new List<bool>();
         key = new List<bool>();
         GenerateKey();
-
         CreateState();
         
 
@@ -32,10 +31,25 @@ public class ManagerRoom1 : MonoBehaviour
     /// </summary>
     private void GenerateKey()
     {
-        for (int i = 0; i < trigNumber; i++)
+        bool isOneTrue = false;
+        while (!isOneTrue)
         {
-            key.Add(Random.Range(0,2) != 0);
-            Debug.Log(key[i]);
+            for (int i = 0; i < trigNumber; i++)
+            {
+                if (key.Count > i)
+                {
+                    key[i] = (Random.Range(0,2) != 0);
+                }
+                else
+                {
+                    key.Add(Random.Range(0,2) != 0);
+                }
+                if (key[i] == true)
+                {
+                    isOneTrue = true;
+                }
+                Debug.Log(key[i]);
+            }
         }
     }
 

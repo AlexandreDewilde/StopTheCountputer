@@ -21,6 +21,11 @@ public class GeneralManager : MonoBehaviour
         roomsCoords.Add(new Vector3(0,0,0));
     }
 
+    void Start()
+    {
+        Instantiate(CPURoom, coordsCPURoom, Quaternion.identity);
+    }
+
     public void GenerateRoom(Vector3 position, Vector3 direction)
     {
         GameObject newRoom = rooms[Random.Range(0, rooms.Count)];
@@ -38,19 +43,19 @@ public class GeneralManager : MonoBehaviour
             Debug.Log(x);
             if (x <= -1)
             {
-                Instantiate(bigDoor, roomPosition - new Vector3(12.5f,0,0), Quaternion.Euler(0, 0, 90));
+                Instantiate(bigDoor, roomPosition - new Vector3(12.5f,0,-2), Quaternion.Euler(0, 0, 90));
             }
             if (x >= maxX)
             {
-                Instantiate(bigDoor, roomPosition + new Vector3(12.5f,0,0), Quaternion.Euler(0, 0, 90));
+                Instantiate(bigDoor, roomPosition + new Vector3(12.5f,0,-2), Quaternion.Euler(0, 0, 90));
             }
             if (y <= -1)
             {
-                Instantiate(bigDoor, roomPosition - new Vector3(0,12.5f,0), Quaternion.Euler(0, 0, 0));
+                Instantiate(bigDoor, roomPosition - new Vector3(0,12.5f,-2), Quaternion.Euler(0, 0, 0));
             }
             if (y >= maxY)
             {
-                Instantiate(bigDoor, roomPosition + new Vector3(0,12.5f,0), Quaternion.Euler(0, 0, 0));
+                Instantiate(bigDoor, roomPosition + new Vector3(0,12.5f,-2), Quaternion.Euler(0, 0, 0));
             }
         }
     }

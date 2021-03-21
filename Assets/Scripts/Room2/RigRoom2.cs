@@ -7,10 +7,6 @@ public class RigRoom2 : MonoBehaviour
     // Start is called before the first frame update
     public int id = 0;
     public ManagerRoom2 managerRoom2;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per fram
     void OnTriggerEnter2D(Collider2D other)
