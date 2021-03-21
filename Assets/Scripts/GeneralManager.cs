@@ -70,8 +70,8 @@ public class GeneralManager : MonoBehaviour
     {
         if (direction.x == 1) return "left";
         if (direction.x == -1) return "right";
-        if (direction.y == 1) return "up";
-        if (direction.y == -1) return "down";
+        if (direction.y == -1) return "up";
+        if (direction.y == 1) return "down";
         return "left";
     }
 
