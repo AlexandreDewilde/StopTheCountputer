@@ -8,14 +8,16 @@ public class CPUPush : MonoBehaviour
     // Start is called before the first frame update
     private Animator _animator;
     private float timeEnd;
-    private Transform EndScreenContainer;
+    private GameObject EndScreenContainer;
 
     void Awake()
     {
         _animator = GetComponent<Animator>();
     }
+
    private void OnTriggerEnter2D(Collider2D coll) 
    {
+        Debug.Log("PUUUUUULL");
         if (coll.gameObject.tag == "Player")
         {
             _animator.Play("PULL");
@@ -28,8 +30,8 @@ public class CPUPush : MonoBehaviour
     private void end()
     {
         Debug.Log("CpuTriggered");
-        EndScreenContainer = transform.Find("EndScreen");
-        EndScreenContainer.gameObject.SetActive(true);
+        EndScreenContainer = GameObject.Find("EndScreen");
+        EndScreenContainer.GetComponent<Canvas>().enabled = true;
         HighScoreTable.PushScore(Globals.PlayerName, 100);
     }
 }
