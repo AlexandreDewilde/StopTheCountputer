@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class TimerText : MonoBehaviour
 {
 
-    public float Tzero;
-    public static float Timer;
+    public static float Tzero;
+    public float Timer;
     public GameObject TextTimer;
     
     // Update is called once per frame

@@ -36,17 +36,16 @@ public class HighScoreTable : MonoBehaviour
         public string name;
     }
 
-    public static void PushScore(string name, float score)
+    public static void PushScore(string name, float scoredone)
    {
         string strget = PlayerPrefs.GetString("highscore");
         HighscoresList lstjson = JsonUtility.FromJson<HighscoresList>(strget);
-        
-        Entry ThisPlayer = new Entry() {name = Globals.PlayerName, score = 100};
+        Debug.Log(scoredone);
+        Entry ThisPlayer = new Entry() {name = Globals.PlayerName, score = (int)scoredone};
 
         lstjson.entryList.Add(ThisPlayer);
 
         string strjson = JsonUtility.ToJson(lstjson);
-        Debug.Log(strjson);
         PlayerPrefs.SetString("highscore", strjson);
         PlayerPrefs.Save();
    }
@@ -61,17 +60,13 @@ public class HighScoreTable : MonoBehaviour
 
         transformList = new List<Transform>();
 
-        // List<Entry> entryList = new List<Entry>() {
-        //     new Entry{name = "Alexandre", score = 5000}, 
-        //     new Entry{name = "Guillaume", score = 10000}, 
-        //     new Entry{name = "Hippolyte", score = 7500},
-        //     new Entry{name = "Guillaume", score = 10000}};
+        List<Entry> entryList = new List<Entry>() {
+            new Entry{name = "Guillaume", score = 10000}};
 
-        // HighscoresList entryListObj = new HighscoresList {entryList = entryList};
-        // string jsonStr = JsonUtility.ToJson(entryListObj);
-        // PlayerPrefs.SetString("highscore", jsonStr);
-        // PlayerPrefs.Save();
-        // Debug.Log(PlayerPrefs.GetString("highscore"));
+        HighscoresList entryListObj = new HighscoresList {entryList = entryList};
+        string jsonStr = JsonUtility.ToJson(entryListObj);
+        PlayerPrefs.SetString("highscore", jsonStr);
+        PlayerPrefs.Save();
 
         loadJson();
     }
@@ -121,15 +116,14 @@ public class HighScoreTable : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("highscore");
         HighscoresList entryListObj = JsonUtility.FromJson<HighscoresList>(jsonString);
         entryList = entryListObj.entryList;
-        Debug.Log(entryList.Count);
 
         // Sorting that damn list
         entryList = entryList.OrderBy(w => w.score).ToList();
-        entryList.Reverse();
     
-        foreach (Entry entry in entryList)
+        for (int i = 0; i < entryList.Count; i++)
         {
-            CreateEntry(entry, entryContainer, transformList);
+            if(i <= 10) break;
+            CreateEntry(entryList[i], entryContainer, transformList);
         }
     }
 
