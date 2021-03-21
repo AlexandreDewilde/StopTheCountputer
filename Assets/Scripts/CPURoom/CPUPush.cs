@@ -14,11 +14,15 @@ public class CPUPush : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
     }
-   private void OnMouseDown() 
+   private void OnTriggerEnter2D(Collider2D coll) 
    {
-       _animator.Play("PULL");
-       timeEnd = Time.time;
-       end();
+        if (coll.gameObject.tag == "Player")
+        {
+            _animator.Play("PULL");
+            timeEnd = Time.time;
+            end();
+        }
+       
    }
 
     private void end()
