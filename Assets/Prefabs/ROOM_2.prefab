@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6129845460943797073}
   - component: {fileID: 4466155385107857540}
   - component: {fileID: 3659118208646042829}
+  - component: {fileID: 7211137774448215174}
   m_Layer: 0
   m_Name: Door_LEFT
   m_TagString: Untagged
@@ -213,6 +214,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7211137774448215174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406601313903428488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ae81dead0314e5fb846bb6087f299d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles_explosion: {fileID: 975774788193073437, guid: 5f98c1be8fa9d418cbf5bb67587949fc, type: 3}
 --- !u!1 &530280130033627941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,6 +2200,7 @@ GameObject:
   - component: {fileID: 587218010457497822}
   - component: {fileID: 2824145487374412703}
   - component: {fileID: 3252270206937518173}
+  - component: {fileID: 4960420649370323819}
   m_Layer: 0
   m_Name: Door_RIGHT
   m_TagString: Untagged
@@ -2305,6 +2320,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4960420649370323819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972213636045758681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ae81dead0314e5fb846bb6087f299d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles_explosion: {fileID: 975774788193073437, guid: 5f98c1be8fa9d418cbf5bb67587949fc, type: 3}
 --- !u!1 &4407137601825494966
 GameObject:
   m_ObjectHideFlags: 0
@@ -3594,6 +3622,7 @@ GameObject:
   - component: {fileID: 112199269915784574}
   - component: {fileID: 2258824331255198155}
   - component: {fileID: 6364676307904310850}
+  - component: {fileID: 1221877731162049292}
   m_Layer: 0
   m_Name: Door_TOP
   m_TagString: Untagged
@@ -3713,6 +3742,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1221877731162049292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6896937264730179141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ae81dead0314e5fb846bb6087f299d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles_explosion: {fileID: 975774788193073437, guid: 5f98c1be8fa9d418cbf5bb67587949fc, type: 3}
 --- !u!1 &7159095969530278205
 GameObject:
   m_ObjectHideFlags: 0
@@ -3807,6 +3849,7 @@ GameObject:
   - component: {fileID: 3815750221071734573}
   - component: {fileID: 3716268552195892367}
   - component: {fileID: 888358105166647370}
+  - component: {fileID: 6176524029198639640}
   m_Layer: 0
   m_Name: Door_BOTTOM
   m_TagString: Untagged
@@ -3926,6 +3969,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6176524029198639640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7691940677734068746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ae81dead0314e5fb846bb6087f299d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles_explosion: {fileID: 975774788193073437, guid: 5f98c1be8fa9d418cbf5bb67587949fc, type: 3}
 --- !u!1 &7982741680600018559
 GameObject:
   m_ObjectHideFlags: 0
