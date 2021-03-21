@@ -5,16 +5,25 @@ using UnityEngine;
 public class ManagerRoom2 : MonoBehaviour
 {
     public float pendingTime = 10f; // Time between 2 new Pictures
+    // List of trigs in the room2 
     public List<GameObject> trigs;
+    // List of Colors for each trigs
+    // For instance trigs[0] Colors[0]
     public List<GameObject> screen_Colors;
 
+    // The list of doors, this is useful to destroy all doors
+    // When the puzzle is solved
     public List<GameObject> doors;
 
+    // The number of good move to do in a row to unlock the puzzle
     public int neededRight = 3;
+    // Last Time the move to do was updated
     private float lastTime; //
 
+    // The nomber of good moves makes in a row
     private int countRight = 0;
 
+    // The current id -> the move to do (rig to go to)
     private int currentID = 0;
 
     // Start is called before the first frame update
@@ -22,11 +31,13 @@ public class ManagerRoom2 : MonoBehaviour
     void Awake()
     {
         lastTime = Time.time;
-        NewTrig();
+        UpdateCurrentID();
 
     }
-
-    void NewTrig()
+    /// <summary>
+    /// update the current id -> so a new place to go to
+    /// </summary>
+    void UpdateCurrentID()
     {
         screen_Colors[currentID].GetComponent<SpriteRenderer>().enabled = false;
         int previousID = currentID;
@@ -36,6 +47,7 @@ public class ManagerRoom2 : MonoBehaviour
             screen_Colors[currentID].GetComponent<SpriteRenderer>().enabled = true;
         }
     }
+    
     // Update is called once per frame
     void Update()
     {
@@ -44,11 +56,14 @@ public class ManagerRoom2 : MonoBehaviour
             ResetRight();
             // Debug.Log("New Trig to hit");
             lastTime = Time.time;
-            NewTrig();
+            UpdateCurrentID();
         }
         
     }
 
+    /// <summary>
+    /// Get the current id -> The rig to go to
+    /// </summary>
     public int GetCurrentId()
     {
         return currentID;
@@ -67,7 +82,7 @@ public class ManagerRoom2 : MonoBehaviour
                 Destroy(obj);
             }
         }
-        NewTrig();
+        UpdateCurrentID();
     }
 
     void ResetRight()
