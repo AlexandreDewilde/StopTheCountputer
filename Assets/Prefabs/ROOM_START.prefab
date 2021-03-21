@@ -1475,6 +1475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdedd31f34f839edba112419f5afb72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownRoom: {fileID: 6072370711259558591}
   generatorVector: {x: 0, y: -1, z: 0}
 --- !u!1 &5838229997005026176
 GameObject:
@@ -1720,6 +1721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdedd31f34f839edba112419f5afb72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownRoom: {fileID: 6072370711259558591}
   generatorVector: {x: 1, y: 0, z: 0}
 --- !u!1 &8759236355723780207
 GameObject:
@@ -1813,4 +1815,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdedd31f34f839edba112419f5afb72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownRoom: {fileID: 6072370711259558591}
   generatorVector: {x: 0, y: 1, z: 0}
