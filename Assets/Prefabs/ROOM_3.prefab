@@ -343,7 +343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389582672650980176}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13666663, y: 0.25, z: -0.049999982}
+  m_LocalPosition: {x: -0.13666663, y: 0.25, z: -0.1}
   m_LocalScale: {x: 0.016666668, y: 0.016666668, z: 1}
   m_Children: []
   m_Father: {fileID: 1389582674274585420}
@@ -764,7 +764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389582673814919791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25916672, y: -0.16000001, z: -0.049999982}
+  m_LocalPosition: {x: 0.25916672, y: -0.16000001, z: -0.1}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 1}
   m_Children: []
   m_Father: {fileID: 1389582674274585420}
@@ -895,7 +895,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389582673914358008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3008334, y: -0.038333338, z: -0.049999982}
+  m_LocalPosition: {x: -0.3008334, y: -0.038333338, z: -0.1}
   m_LocalScale: {x: 0.06666667, y: 0.06666667, z: 1}
   m_Children: []
   m_Father: {fileID: 1389582674274585420}
@@ -1026,7 +1026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389582673935308339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.060833298, y: -0.29416668, z: -0.049999982}
+  m_LocalPosition: {x: -0.060833298, y: -0.29416668, z: -0.1}
   m_LocalScale: {x: 0.06666667, y: 0.06666667, z: 1}
   m_Children: []
   m_Father: {fileID: 1389582674274585420}
@@ -1244,7 +1244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389582674391032836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22500007, y: 0.19916666, z: -0.049999982}
+  m_LocalPosition: {x: 0.22500007, y: 0.19916666, z: -0.1}
   m_LocalScale: {x: 0.06666667, y: 0.06666667, z: 1}
   m_Children: []
   m_Father: {fileID: 1389582674274585420}
@@ -1609,6 +1609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392081158001235588}
+  - component: {fileID: 4040739103267080852}
   m_Layer: 0
   m_Name: ROOM_3
   m_TagString: Untagged
@@ -1644,6 +1645,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4040739103267080852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3549246591581979540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfa6bec2be78aed4abfbbe60360c63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorLeft: {fileID: 45355816283426077}
+  doorRight: {fileID: 7320198087899041350}
+  doorUp: {fileID: 6450422012159156609}
+  doorDown: {fileID: 7978105722009560230}
 --- !u!1 &3984664780585158450
 GameObject:
   m_ObjectHideFlags: 0
