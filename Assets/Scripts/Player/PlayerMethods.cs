@@ -9,7 +9,7 @@ public class PlayerMethods:MonoBehaviour
 
     public GameObject hammer;
 
-    private Animator _animator;
+    public Animator _animator_hammer;
 
     private Vector3 distanceRaycastFromCharacter = new Vector3(1f, 0, 0);
     public float distanceHammerHit = 2f;
@@ -20,7 +20,6 @@ public class PlayerMethods:MonoBehaviour
     void Awake()
     {
         controllerComponent = GetComponent<Controller>();
-        _animator = GetComponent<Animator>();
     }
     void Start()
     {
@@ -32,7 +31,7 @@ public class PlayerMethods:MonoBehaviour
         if (isWeaponActive &&!isDown && Input.GetMouseButtonUp(0))
         {
             RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, controllerComponent.GetMousePos(), distanceHammerHit);
-            _animator.Play("Hammer_hit");
+            _animator_hammer.Play("Hammer_hit");
             foreach (RaycastHit2D hit in hits)
             {
                 Debug.Log(hit.collider.gameObject.tag);

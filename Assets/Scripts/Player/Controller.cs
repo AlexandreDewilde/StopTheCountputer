@@ -27,7 +27,7 @@ public class Controller : MonoBehaviour
     {
         move.x = Input.GetAxisRaw("Horizontal");
         move.y = Input.GetAxisRaw("Vertical");
-        if(move.x != 0 || move.y != 0) _animator.Play("walk");
+        if((move.x != 0 || move.y != 0) && !_animator.GetCurrentAnimatorStateInfo(0).IsName("walk")) _animator.Play("walk");
         mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
     }
 
