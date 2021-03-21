@@ -80,6 +80,7 @@ public class PlayerMethods:MonoBehaviour
         roomNameText.text = roomName;
         if (roomName == "Cooling Room") isInRoom4 = true;
         else isInRoom4 = false;
+        Debug.Log(isInRoom4);
 
     }
 
