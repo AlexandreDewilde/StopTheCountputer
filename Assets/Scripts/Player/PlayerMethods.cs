@@ -10,16 +10,19 @@ public class PlayerMethods:MonoBehaviour
     public GameObject hammer;
 
     public Animator _animator_hammer;
+    private Rigidbody2D rb;
 
     private Vector3 distanceRaycastFromCharacter = new Vector3(1f, 0, 0);
     public float distanceHammerHit = 2f;
     private bool isWeaponActive= false;
     private Controller controllerComponent;
+    private  bool isInRoom4 = false;
     private bool isDown = false;
 
     void Awake()
     {
         controllerComponent = GetComponent<Controller>();
+        rb = GetComponent<Rigidbody2D>();
     }
     void Start()
     {
@@ -48,6 +51,11 @@ public class PlayerMethods:MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        if (isInRoom4) rb.AddForce(new Vector3(Random.Range(-10,10), Random.Range(-10,10), 0));
+    }
+
     public void PickWeapon(int weaponId)
     {
         if (weaponId == 1)
@@ -70,6 +78,8 @@ public class PlayerMethods:MonoBehaviour
     {
 
         roomNameText.text = roomName;
+        if (roomName == "Cooling Room") isInRoom4 = true;
+        else isInRoom4 = false;
 
     }
 
