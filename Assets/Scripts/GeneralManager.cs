@@ -13,11 +13,12 @@ public class GeneralManager : MonoBehaviour
     public List<GameObject> rooms;
     private Vector3 coordsCPURoom;
 
-    private List<Vector3> roomsCoords = new List<Vector3>();
+    private HashSet<Vector3> roomsCoords = new HashSet<Vector3>();
     // Start is called before the first frame update
     void Awake()
     {
         coordsCPURoom = new Vector3(25f * Random.Range(2,4), 25f * Random.Range(2,4), 0);
+        roomsCoords.Add(coordsCPURoom);
         roomsCoords.Add(new Vector3(0,0,0));
     }
 
@@ -33,14 +34,14 @@ public class GeneralManager : MonoBehaviour
         distance.x = distance.x * direction.x;
         distance.y = distance.y * direction.y;
         Vector3 roomPosition = distance + position;
-        if (!CheckIfCoordsExist(roomPosition))
+        if (!roomsCoords.Contains(roomPosition))
         {
             RoomMethods createdRoom = Instantiate(newRoom, roomPosition, Quaternion.identity).GetComponent<RoomMethods>();
             createdRoom.DestroyDoor(DoorToDeleteFromDirection(direction));
             roomsCoords.Add(roomPosition);
             float x = roomPosition.x / 25f;
             float y = roomPosition.y / 25f;
-            Debug.Log(x);
+            //Debug.Log(x);
             if (x <= -1)
             {
                 Instantiate(bigDoor, roomPosition - new Vector3(12.5f,0,-2), Quaternion.Euler(0, 0, 90));
@@ -67,15 +68,5 @@ public class GeneralManager : MonoBehaviour
         if (direction.y == -1) return "up";
         if (direction.y == 1) return "down";
         return "none";
-    }
-
-    bool CheckIfCoordsExist(Vector3 coords)
-    {
-        foreach (Vector3 roomCoord in roomsCoords)
-        {
-            if (roomCoord.x == coords.x && roomCoord.y == coords.y) return true;
-
-        }
-        return false;
     }
 }
